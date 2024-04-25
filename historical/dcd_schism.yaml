@@ -11,8 +11,8 @@ dcd:
   path_dsm2_drainage_rates: "inputs/drainage_factors_dsm2.csv"
 
   # Output files
-  path_dcd_output: "output/dcd_areas_schism.nc"
-  path_dcd_node_output: "output/dcd_schism.nc"
+  path_dcd_output: "output/dcd_areas_schism_nows_lch1.nc"
+  path_dcd_node_output: "output/dcd_schism_nows_lch1.nc"
 
   # DCD parameters
   start_water_year: 1922
