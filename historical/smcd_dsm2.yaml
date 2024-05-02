@@ -17,7 +17,7 @@ dcd:
   # DCD parameters
   start_water_year: 1922
   end_water_year: 2024
-  leach_scale: 5.0
+  leach_scale: 1.0
   runoff_rate: 0.75
   deep_percolation_rate: 0.25
   # For some models, e.g. DSM2, evaporation from waterbody may need to be
