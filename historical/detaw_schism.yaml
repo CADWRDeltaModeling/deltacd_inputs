@@ -48,7 +48,7 @@ detaw:
   # Model Output control
   detaw_output: 'outputs/detawoutput_schism.nc'
   precip_output: 'outputs/precip_schism.nc'
-  et_output: 'output/ET0.nc'
+  et_output: 'outputs/ET0.nc'
   daily_output: 1
   monthly_output: 1
   yearly_output: 0
