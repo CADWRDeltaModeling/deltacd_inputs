@@ -31,7 +31,7 @@ area_id,name,uplow,acreage,docregion
 30,GLIDE DISTRICT,low,1346,Lower
 31,EL PESCADERO,low,7194,Lower
 32,HOTCHKISS TRACT,low,3345,High
-33,BRYON TRACT,low,6518,High
+33,BYRON TRACT,low,6518,High
 34,CLIFTON COURT,low,3855,High
 35,INACTIVE,low,2247,Midrange
 36,WEBER TRACT,up,1056,Lower
@@ -127,7 +127,7 @@ area_id,name,uplow,acreage,docregion
 126,UNDESIGNATED AREA,up,499,Lower
 127,LITTLE HOLLAND TRACT,low,2429,Midrange
 128,UNDESIGNATED AREA,up,4293,Lower
-129,UNDESINATED AREA,low,524,High
+129,UNDESIGNATED AREA,low,524,High
 130,UNDESIGNATED AREA,up,31888,Lower
 131,BETHEL ISLAND,low,3521,High
 132,CONEY ISLAND,low,1071,Lower
@@ -167,7 +167,7 @@ area_id,name,uplow,acreage,docregion
 166,split from island 129,low,463,High
 167,split from island 129,low,3388,High
 168,split from island 130,up,419,Lower
-169,BBID in BRYON TRACT 33,low,2,High
+169,BBID in BYRON TRACT 33,low,2,High
 170,BBID in CLIFTON COURT 34,low,108,High
 171,BBID in UNDESIGNATED AREA 128,up,1687,Lower
 172,BBID in UNDESIGNATED AREA 130,up,4401,Lower
