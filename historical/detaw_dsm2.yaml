@@ -41,7 +41,7 @@ detaw:
   input_pcp: 'inputs/mm_pcp.csv'
   input_temperature: 'inputs/LODI_PT.csv'
   landuse : 'inputs/landuse_dsm2.csv'
-  et_correction: 'inputs/percentage.csv'
+  et_correction: 'inputs/et_correction_dsm2.csv'
   critical: 'inputs/crop_info_critical.csv'
   noncritical: 'inputs/crop_info_noncritical.csv'
   # Model Output control
