@@ -9,8 +9,8 @@ area_id,name,uplow,acreage,docregion
 8,SHERMAN ISLAND,low,10455,High
 9,NEW HOPE TRACT,low,9913,Midrange
 10,SUTTER ISLAND,low,2620,Lower
-11,ROUGH AND READY,low,1464,Midrange
-12,MOSS TRACT  (BOGGS),low,2936,Midrange
+11,ROUGH AND READY,low,330,Midrange
+12,MOSS TRACT  (BOGGS),low,237,Midrange
 13,ANDRUS ISLAND (MIDDLE),low,1892,Midrange
 14,RYER ISLAND,low,11976,Midrange
 15,ROBERTS ISLAND  (MIDDLE),low,11986,Midrange
@@ -22,7 +22,7 @@ area_id,name,uplow,acreage,docregion
 21,WALNUT GROVE,low,508,Midrange
 22,ANDRUS ISLAND (UPPER),low,2574,Midrange
 23,TYLER ISLAND,low,8939,Midrange
-24,POCKET DISTRICT,low,3516,Lower
+24,POCKET DISTRICT,low,484,Lower
 25,ROBERTS ISLAND  (LOWER),low,11308,Midrange
 26,SCRIBNER,low,1612,Lower
 27,HOOD JUNCTION,low,113,Midrange
@@ -31,19 +31,19 @@ area_id,name,uplow,acreage,docregion
 30,GLIDE DISTRICT,low,1346,Lower
 31,EL PESCADERO,low,7194,Lower
 32,HOTCHKISS TRACT,low,3345,High
-33,BYRON TRACT,low,6518,High
-34,CLIFTON COURT,low,3855,High
+33,BRYON TRACT,low,6516,High
+34,CLIFTON COURT,low,3747,High
 35,INACTIVE,low,2247,Midrange
-36,WEBER TRACT,up,1056,Lower
+36,WEBER TRACT,up,202,Lower
 37,JERSEY ISLAND,low,3571,High
-38,WEST SACRAMENTO,low,11950,Lower
+38,WEST SACRAMENTO,low,4296,Lower
 39,NETHERLANDS (COUNTIES 48 & 57),low,26173,Lower
 40,UNNAMED,low,6746,Midrange
-41,PICO AND NAGLEE,up,11113,Lower
+41,PICO AND NAGLEE,up,9608,Lower
 42,TWITCHELL ISLAND,low,3694,High
-43,SMITH RANCH,low,1038,High
+43,SMITH RANCH,low,246,High
 44,PRIVATELY OWNED,up,1782,Midrange
-45,SMITH TRACT,up,2048,Lower
+45,SMITH TRACT,up,64,Lower
 46,PROSPECT ISLAND,low,2503,Midrange
 47,MILDRED ISLAND,low,1608,Midrange
 48,VENICE ISLAND,low,4396,High
@@ -61,10 +61,10 @@ area_id,name,uplow,acreage,docregion
 60,JONES TRACT  (UPPER),low,6746,Midrange
 61,VICTORIA ISLAND,low,7943,Midrange
 62,MEDFORD ISLAND,low,1544,Midrange
-63,BISHOP TRACT,low,2357,High
+63,BISHOP TRACT,low,2063,High
 64,KING ISLAND,low,3669,High
 65,PESCADERO DISTRICT,low,5089,Lower
-66,PESCADERO DISTRICT,up,3915,Lower
+66,PESCADERO DISTRICT,up,3482,Lower
 67,BRADFORD ISLAND,low,2190,High
 68,HASTINGS TRACT,low,7539,High
 69,STEWART TRACT,low,4332,Lower
@@ -73,11 +73,11 @@ area_id,name,uplow,acreage,docregion
 72,BRANNON ISLAND,low,7626,High
 73,YOLANO (COUNTIES 48 & 57),up,13940,Lower
 74,WOODWARD ISLAND,low,1851,Midrange
-75,SARGENT-BARNHART TRACT,low,1367,High
+75,SARGENT-BARNHART TRACT,low,192,High
 76,MCMULLIN RANCH,up,1959,Lower
 77,INACTIVE,up,19637,Lower
 78,UNNAMED,low,2765,High
-79,KASSON,up,2414,Lower
+79,KASSON,up,2237,Lower
 80,CANAL RANCH,low,3084,Midrange
 81,CANAL RANCH,up,274,Midrange
 82,STARK TRACT,low,753,Lower
@@ -101,12 +101,12 @@ area_id,name,uplow,acreage,docregion
 100,MCCORMACK-WILLIAMSON TRACT,low,1811,Midrange
 101,STONE LAKE AREA,up,5240,Midrange
 102,UNDESIGNATED AREA,low,1026,High
-103,UNDESIGNATED AREA,up,34131,High
+103,UNDESIGNATED AREA,up,13446,High
 104,ACKER ISLAND,low,110,High
 105,ATLAS TRACT,low,340,High
-106,ATLAS TRACT,up,87,High
+106,ATLAS TRACT,up,86,High
 107,DREXLER TRACT,low,3390,Midrange
-108,ELMWOOD TRACT,low,939,High
+108,ELMWOOD TRACT,low,920,High
 109,FERN ISLAND,low,107,Midrange
 110,HEADREACH ISLAND,low,212,Midrange
 111,HENNING TRACT,low,2793,Midrange
@@ -114,7 +114,7 @@ area_id,name,uplow,acreage,docregion
 113,HONKER LAKE TRACT,low,2267,Midrange
 114,MORRISON ISLAND,low,111,High
 115,RIO BLANCO TRACT,low,793,High
-116,SHIMA TRACT,low,1947,High
+116,SHIMA TRACT,low,1945,High
 117,SHIN KEE TRACT,low,1569,High
 118,SPUD ISLAND,low,205,Midrange
 119,STATEN ISLAND,low,9660,High
@@ -126,9 +126,9 @@ area_id,name,uplow,acreage,docregion
 125,UNDESIGNATED AREA,low,1200,Lower
 126,UNDESIGNATED AREA,up,499,Lower
 127,LITTLE HOLLAND TRACT,low,2429,Midrange
-128,UNDESIGNATED AREA,up,4293,Lower
-129,UNDESIGNATED AREA,low,524,High
-130,UNDESIGNATED AREA,up,31888,Lower
+128,UNDESIGNATED AREA,up,2606,Lower
+129,UNDESINATED AREA,low,524,High
+130,UNDESIGNATED AREA,up,27487,Lower
 131,BETHEL ISLAND,low,3521,High
 132,CONEY ISLAND,low,1071,Lower
 133,DUTCH SLOUGH AND PORTION OF SAND MOUND SLOUGH,low,222,High
@@ -141,21 +141,21 @@ area_id,name,uplow,acreage,docregion
 140,SAN JOAQUIN RIVER WATERWAY,low,2105,High
 141,SAN JOAQUIN WATERWAY NORTH OF INDUSTRIAL STRIP,low,1537,High
 142,TAYLOR SLOUGH WATERWAY,low,140,High
-143,split from island 4,up,7099,Lower
+143,split from island 4,up,5916,Lower
 144,split from island 17,up,215,High
 145,split from island 17,up,203,High
 146,split from island 92,low,627,Lower
-147,split from island 93,up,6914,Lower
-148,split from island 93,up,371,Lower
-149,split from island 102,low,304,High
-150,split from island 102,low,811,High
-151,split from island 102,low,508,High
+147,split from island 93,up,4422,Lower
+148,split from island 93,up,45,Lower
+149,split from island 102,low,124,High
+150,split from island 102,low,92,High
+151,split from island 102,low,31,High
 152,split from island 102,low,145,High
-153,split from island 103,up,13830,High
+153,split from island 103,up,9650,High
 154,split from island 103,up,1170,High
-155,split from island 103,up,1013,High
+155,split from island 103,up,43,High
 156,split from island 103,up,1762,High
-157,split from island 103,up,1613,High
+157,split from island 103,up,1045,High
 158,split from island 121,low,5416,High
 159,split from island 122,up,4729,High
 160,split from island 122,up,881,High
@@ -171,7 +171,7 @@ area_id,name,uplow,acreage,docregion
 170,Stockton in MOSS TRACT  (BOGGS) 12,low,2699,Midrange
 171,Sacramento in POCKET DISTRICT 24,low,3032,Lower
 172,Stockton in ROBERTS ISLAND  (LOWER) 25,low,0,Midrange
-173,BBID in BYRON TRACT 33,low,2,High
+173,BBID in BRYON TRACT 33,low,2,High
 174,BBID in CLIFTON COURT 34,low,108,High
 175,Stockton in WEBER TRACT 36,up,854,Lower
 176,West Sac in WEST SACRAMENTO 38,low,7654,Lower
