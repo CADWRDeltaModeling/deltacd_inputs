@@ -10,6 +10,9 @@ Welcome to DeltCD Inputs's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   historical
+   planning
+   projectspecific
 
 
 Indices and tables
