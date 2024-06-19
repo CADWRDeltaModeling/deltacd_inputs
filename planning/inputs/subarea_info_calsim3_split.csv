@@ -22,12 +22,12 @@ area_id_from,area_id_to,name,uplow,acreage,docregion
 120,SJR_EAST,Stockton in WRIGHT TRACT 120,low,0,High
 125,SAC_SOUTH,Sacramento in UNDESIGNATED AREA 125,low,0,Lower
 128,50_PA2,50_PA2 in UNDESIGNATED AREA 128,up,1687,Lower
-130,SJR_WEST,50_PA2 in UNDESIGNATED AREA 130,up,4401,Lower
+130,50_PA2,50_PA2 in UNDESIGNATED AREA 130,up,4401,Lower
 143,SJR_EAST,Stockton in split from island 4 143,up,1183,Lower
 147,SAC_NORTH,Sacramento in split from island 93 147,up,2492,Lower
 148,SAC_NORTH,Sacramento in split from island 93 148,up,321,Lower
-149,50_PA2,Stockton in split from island 102 149,low,180,High
-150,50_PA2,Stockton in split from island 102 150,low,719,High
+149,SJR_EAST,Stockton in split from island 102 149,low,180,High
+150,SJR_EAST,Stockton in split from island 102 150,low,719,High
 151,SJR_EAST,Stockton in split from island 102 151,low,477,High
 153,SJR_EAST,Stockton in split from island 103 153,up,4180,High
 155,SJR_EAST,Stockton in split from island 103 155,up,970,High
