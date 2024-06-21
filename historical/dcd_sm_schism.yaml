@@ -11,7 +11,7 @@ dcd:
   path_dsm2_drainage_rates: "inputs/drainage_factors_suisun.csv"
 
   # Output files
-  path_dcd_output: "outputs/smcd_schism_nows_lch1_20240424.nc"
+  path_dcd_output: "outputs/smcd_schism_areas_nows_lch1_20240424.nc"
   path_dcd_node_output: "outputs/smcd_schism_nows_lch1_20240424.nc"
 
   # DCD parameters
