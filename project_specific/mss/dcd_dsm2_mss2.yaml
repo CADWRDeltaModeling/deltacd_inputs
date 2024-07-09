@@ -9,6 +9,9 @@ dcd:
   path_groundwater_rates: "inputs/gwrates_dsm2_mss.csv"
   path_dsm2_diversion_rates: "inputs/diversion_factors_dsm2_mss.csv"
   path_dsm2_drainage_rates: "inputs/drainage_factors_dsm2_mss.csv"
+  path_split_table: "inputs/split_table_dsm2.csv"
+  path_subarea_info_split: "inputs/subarea_info_dsm2_split.csv"
+  path_landuse_split_ratios: "inputs/landuse_dsm2_split.csv"
 
   # Output files
   path_dcd_output: "outputs/dcd_areas_dsm2_mss2.nc"
