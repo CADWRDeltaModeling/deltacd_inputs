@@ -17,34 +17,23 @@
 
 # DETAW input parameters
 detaw:
-
-  #--------------------------------------------------------------------------
-  # OPTION 1 - DSM2
-  #            DCD estimates the daily historical channel depletions,
-  #            including diversions,drainages and seepage of DSM2 nodes.
-  # OPTION 2 - SCHISM
-  #            DCD estimates the daily historical channel depletions without
-  #            water surface evaporation. SCHISM itself can estimate the
-  #            water surface evaporation of SCHISM simulation region.
-  # OPTION 3 - CALSIM3
-  #            DCD estimates the monthly planning of channel depletions for
-  #            seven Delta nodes of CALSIM3, monthly island deep percolations,
-  #            and monthly island groundwater supplied to crop
-  #            evapotranspiration.
-  target_model: "DSM2"
-
   #-------------------------------------------------
   # Other model parameters
-  # FIXME Need more documentations here for parameters.
+  # The model start and end year in water year.
   start_water_year: 1922
   end_water_year: 2023
+  # The input precipitation CSV file. Station precipitation in mm.
   input_pcp: 'inputs/mm_pcp.csv'
+  # The input temperature CSV file. Station temperature in deg C.
   input_temperature: 'inputs/LODI_PT.csv'
+  # The land use CSV file. Yearly landuse in Hectares.
   landuse : 'inputs/landuse_dsm2.csv'
+  # The ET correction CSV file
   et_correction: 'inputs/percentage_mss1.csv'
+  # The critical years and non-critical years crop CSV files
   critical: 'inputs/critical.csv'
   noncritical: 'inputs/noncritical.csv'
- 
+
   # Model Output control
   detaw_output: 'outputs/detawoutput_dsm2_mss1.nc'
   precip_output: 'outputs/precip_dsm2_mss1.nc'
