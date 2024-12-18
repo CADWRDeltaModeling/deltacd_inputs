@@ -11,12 +11,12 @@ dcd:
   path_dsm2_drainage_rates: "inputs/drainage_factors_suisun.csv"
 
   # Output files
-  path_dcd_output: "outputs/smcd_schism_areas_nows_lch1_20240424.nc"
-  path_dcd_node_output: "outputs/smcd_schism_nows_lch1_20240424.nc"
+  path_dcd_output: "outputs/smcd_schism_areas_nows_lch1_20241215.nc"
+  path_dcd_node_output: "outputs/smcd_schism_nows_lch1_20241215.nc"
 
   # DCD parameters
   start_water_year: 1922
-  end_water_year: 2024
+  end_water_year: 2025
   leach_scale: 1.0
   runoff_rate: 0.75
   deep_percolation_rate: 0.25

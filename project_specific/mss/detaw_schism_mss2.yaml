@@ -21,7 +21,7 @@ detaw:
   # Other model parameters
   # The model start and end year in water year.
   start_water_year: 1922
-  end_water_year: 2023
+  end_water_year: 2025
   # The input precipitation CSV file. Station precipitation in mm.
   input_pcp: 'inputs/mm_pcp.csv'
   # The input temperature CSV file. Station temperature in deg C.
