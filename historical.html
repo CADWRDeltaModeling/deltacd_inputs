@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Historical Data &#8212; DeltCD Inputs  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Planning Data" href="planning.html" />
+    <link rel="prev" title="Welcome to DeltCD Inputs’s documentation!" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="planning.html" title="Planning Data"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to DeltCD Inputs’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">DeltCD Inputs  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Historical Data</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="historical-data">
+<h1>Historical Data<a class="headerlink" href="#historical-data" title="Link to this heading">¶</a></h1>
+<p>The historical inputs are used to produce channel depletion outputs for DSM2, SCHISM, Suisun Marsh. There are two sets of historical inputs per case, one for the DETAW step, and the other for DCD step.</p>
+<section id="detaw-inputs">
+<h2>DETAW Inputs<a class="headerlink" href="#detaw-inputs" title="Link to this heading">¶</a></h2>
+<p>The DETAW part calculates the water balance for each subarea. The input files for the DETAW part are shown in the sections below.</p>
+<section id="main-input-file">
+<h3>Main input file<a class="headerlink" href="#main-input-file" title="Link to this heading">¶</a></h3>
+<p>The main input file is a YAML format file that contains parameters and input file names for DETAW model. The main input file for DSM2 is shown below as an example. See the <a class="reference external" href="https://cadwrdeltamodeling.github.io/deltacd/detaw.html#main-input-file">DETAW documentation</a> for more information.</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">detaw_dsm2.yaml</span><a class="headerlink" href="#id1" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1">#----------------------------------------------------------------------------</span>
+<span class="c1">#                 DeltaCD v1.0 DETAW input file</span>
+<span class="c1">#----------------------------------------------------------------------------</span>
+<span class="c1"># DeltaCD estimates the Sacramento-San Joaquin Delta hydrology, including</span>
+<span class="c1"># consumptive use, ground surface water balance, and channel depletion, given</span>
+<span class="c1"># the climate and land use data.</span>
+<span class="c1">#</span>
+<span class="c1"># It could support the historical, planning or forecasting studies related to</span>
+<span class="c1"># the Delta surface water quantity and quality. This version provides three</span>
+<span class="c1"># options to estimate the Delta channel depletions in the customized output</span>
+<span class="c1"># formats applied to three models: DSM2, SCHISM, and CALSIM. The model inputs</span>
+<span class="c1"># and outputs of these options could be taken as the basis for developing</span>
+<span class="c1"># various Delta water environmental studies.</span>
+<span class="c1">#</span>
+<span class="c1">#----------------------------------------------------------------------------</span>
+<span class="c1">#----------------------------------------------------------------------------</span>
+
+<span class="c1"># DETAW input parameters</span>
+<span class="nt">detaw</span><span class="p">:</span>
+<span class="w">  </span><span class="c1">#-------------------------------------------------</span>
+<span class="w">  </span><span class="c1"># Other model parameters</span>
+<span class="w">  </span><span class="c1"># The model start and end year in water year.</span>
+<span class="w">  </span><span class="nt">start_water_year</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1922</span>
+<span class="w">  </span><span class="nt">end_water_year</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2024</span>
+<span class="w">  </span><span class="c1"># The input precipitation CSV file. Station precipitation in mm.</span>
+<span class="w">  </span><span class="nt">input_pcp</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;inputs/mm_pcp.csv&#39;</span>
+<span class="w">  </span><span class="c1"># The input temperature CSV file. Station temperature in deg C.</span>
+<span class="w">  </span><span class="nt">input_temperature</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;inputs/LODI_PT.csv&#39;</span>
+<span class="w">  </span><span class="c1"># The land use CSV file. Yearly landuse in Hectares.</span>
+<span class="w">  </span><span class="nt">landuse </span><span class="p">:</span><span class="w"> </span><span class="s">&#39;inputs/landuse_dsm2.csv&#39;</span>
+<span class="w">  </span><span class="c1"># The ET correction CSV file</span>
+<span class="w">  </span><span class="nt">et_correction</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;inputs/et_correction_dsm2.csv&#39;</span>
+<span class="w">  </span><span class="c1"># The critical years and non-critical years crop CSV files</span>
+<span class="w">  </span><span class="nt">critical</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;inputs/crop_info_critical.csv&#39;</span>
+<span class="w">  </span><span class="nt">noncritical</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;inputs/crop_info_noncritical.csv&#39;</span>
+
+<span class="w">  </span><span class="c1"># Model Output control</span>
+<span class="w">  </span><span class="nt">detaw_output</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;outputs/detawoutput_dsm2.nc&#39;</span>
+<span class="w">  </span><span class="nt">precip_output</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;outputs/precip_dsm2.nc&#39;</span>
+<span class="w">  </span><span class="nt">et_output</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;outputs/et0.nc&#39;</span>
+<span class="w">  </span><span class="nt">daily_output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">monthly_output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">yearly_output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">delta_output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">daily_output_unit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">for_dsm2_only</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="precipitation">
+<h3>Precipitation<a class="headerlink" href="#precipitation" title="Link to this heading">¶</a></h3>
+<p>A Precipitation input file contains daily precipitation data table for climate stations in the CSV format. The first line is the header, and the columns are year, month, day, julian day of year (DOY), and precipitation data for each station.  The unit of the precipitation data is in mm/day.</p>
+<p>For the Delta, there are seven stations from  Brentwood, Davis, Galt, Lodi, RioVista, Stockton, and Tracy. A sample format of the precipitation data is shown below.</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">mm_pcp.csv for DSM2</span><a class="headerlink" href="#id2" title="Link to this code">¶</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">year</span><span class="p">,</span><span class="n">month</span><span class="p">,</span><span class="n">day</span><span class="p">,</span><span class="n">DOY</span><span class="p">,</span><span class="n">Brentwood</span><span class="p">,</span><span class="n">Davis</span><span class="p">,</span><span class="n">Galt</span><span class="p">,</span><span class="n">Lodi</span><span class="p">,</span><span class="n">RioVista</span><span class="p">,</span><span class="n">Stockton</span><span class="p">,</span><span class="n">Tracy</span>
+<span class="mi">2021</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span>
+<span class="mi">2021</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.3</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.0</span>
+<span class="mi">2021</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span>
+</pre></div>
+</div>
+</div>
+<table class="docutils align-default" id="id3">
+<caption><span class="caption-text">Precipitation data</span><a class="headerlink" href="#id3" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>year</p></th>
+<th class="head"><p>month</p></th>
+<th class="head"><p>day</p></th>
+<th class="head"><p>DOY</p></th>
+<th class="head"><p>Brentwood</p></th>
+<th class="head"><p>Davis</p></th>
+<th class="head"><p>Galt</p></th>
+<th class="head"><p>Lodi</p></th>
+<th class="head"><p>RioVista</p></th>
+<th class="head"><p>Stockton</p></th>
+<th class="head"><p>Tracy</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2021</p></td>
+<td><p>01</p></td>
+<td><p>01</p></td>
+<td><p>1</p></td>
+<td><p>0.2</p></td>
+<td><p>0.0</p></td>
+<td><p>0.1</p></td>
+<td><p>0.0</p></td>
+<td><p>0.3</p></td>
+<td><p>0.0</p></td>
+<td><p>0.1</p></td>
+</tr>
+<tr class="row-odd"><td><p>2021</p></td>
+<td><p>01</p></td>
+<td><p>02</p></td>
+<td><p>2</p></td>
+<td><p>0.0</p></td>
+<td><p>0.1</p></td>
+<td><p>0.0</p></td>
+<td><p>0.2</p></td>
+<td><p>0.0</p></td>
+<td><p>0.1</p></td>
+<td><p>0.0</p></td>
+</tr>
+<tr class="row-even"><td><p>2021</p></td>
+<td><p>01</p></td>
+<td><p>03</p></td>
+<td><p>3</p></td>
+<td><p>0.1</p></td>
+<td><p>0.0</p></td>
+<td><p>0.2</p></td>
+<td><p>0.0</p></td>
+<td><p>0.1</p></td>
+<td><p>0.0</p></td>
+<td><p>0.3</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="landuse">
+<h3>Landuse<a class="headerlink" href="#landuse" title="Link to this heading">¶</a></h3>
+<p>A csv file with landuse data for the subareas. This is annual landuse. The units of the data are in hectares/year. DSM2, SCHISM and Calsim3 use 15 landuse categories. Suisun Marsh uses 16 landuse categories.</p>
+<table class="docutils align-default" id="id4">
+<caption><span class="caption-text">Landuse categories</span><a class="headerlink" href="#id4" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Number</p></th>
+<th class="head"><p>Crop categories</p></th>
+<th class="head"><p>Landuse ID</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>Urban</p></td>
+<td><p>UR</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>Pasture</p></td>
+<td><p>PA</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>Alfalfa</p></td>
+<td><p>AL</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>Field Crops</p></td>
+<td><p>FI</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>Sugar Beets</p></td>
+<td><p>SB</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>Grain</p></td>
+<td><p>GR</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>Rice</p></td>
+<td><p>RI</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>Trucks</p></td>
+<td><p>TR</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>Tomatoes</p></td>
+<td><p>TO</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>Orchards</p></td>
+<td><p>OR</p></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>Vineyards</p></td>
+<td><p>VI</p></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p>Riparian Vegetation</p></td>
+<td><p>RV</p></td>
+</tr>
+<tr class="row-even"><td><p>13</p></td>
+<td><p>Native Vegetation</p></td>
+<td><p>NV</p></td>
+</tr>
+<tr class="row-odd"><td><p>14</p></td>
+<td><p>Non-Irrigated Grains</p></td>
+<td><p>DGR</p></td>
+</tr>
+<tr class="row-even"><td><p>15</p></td>
+<td><p>Water Surfaces</p></td>
+<td><p>WS</p></td>
+</tr>
+</tbody>
+</table>
+<p>The processed crop-specific landuse data is collected from survey or satellite images.</p>
+</section>
+<section id="precipitation-distribution-et-correction">
+<h3>Precipitation distribution / ET Correction<a class="headerlink" href="#precipitation-distribution-et-correction" title="Link to this heading">¶</a></h3>
+<p>Rainfall data were unavailable for most of the Delta sub-areas. Therefore, a spatial relationship between rainfall data from key stations was developed and used to estimate rainfall in each of the 168 sub-areas. Similarly, ET correction factors were developed comparing ET from DETAW to remotely sensed estimates. This file does not need to be modified unless one is trying to change the spatial distribution of rainfall or ET correction factors.</p>
+</section>
+<section id="crop-information-critical-year">
+<h3>Crop information (Critical Year)<a class="headerlink" href="#crop-information-critical-year" title="Link to this heading">¶</a></h3>
+</section>
+<section id="crop-information-non-critical-year">
+<h3>Crop information (Non Critical Year)<a class="headerlink" href="#crop-information-non-critical-year" title="Link to this heading">¶</a></h3>
+</section>
+</section>
+<section id="dcd-inputs">
+<h2>DCD Inputs<a class="headerlink" href="#dcd-inputs" title="Link to this heading">¶</a></h2>
+<p>The DCD part distributes the DETAW outputs to model nodes while accounting for area splitting and double-counting for Calsim3, for example.</p>
+<section id="subarea-info">
+<h3>Subarea info<a class="headerlink" href="#subarea-info" title="Link to this heading">¶</a></h3>
+</section>
+<section id="irrigation-efficiency">
+<h3>Irrigation efficiency<a class="headerlink" href="#irrigation-efficiency" title="Link to this heading">¶</a></h3>
+</section>
+<section id="leach-applied">
+<h3>Leach applied<a class="headerlink" href="#leach-applied" title="Link to this heading">¶</a></h3>
+</section>
+<section id="leach-drained">
+<h3>Leach drained<a class="headerlink" href="#leach-drained" title="Link to this heading">¶</a></h3>
+</section>
+<section id="groundwater-rates">
+<h3>Groundwater rates<a class="headerlink" href="#groundwater-rates" title="Link to this heading">¶</a></h3>
+</section>
+<section id="diversion-rates">
+<h3>Diversion rates<a class="headerlink" href="#diversion-rates" title="Link to this heading">¶</a></h3>
+</section>
+<section id="drainage-rates">
+<h3>Drainage rates<a class="headerlink" href="#drainage-rates" title="Link to this heading">¶</a></h3>
+</section>
+<section id="detaw-output">
+<h3>Detaw output<a class="headerlink" href="#detaw-output" title="Link to this heading">¶</a></h3>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Historical Data</a><ul>
+<li><a class="reference internal" href="#detaw-inputs">DETAW Inputs</a><ul>
+<li><a class="reference internal" href="#main-input-file">Main input file</a></li>
+<li><a class="reference internal" href="#precipitation">Precipitation</a></li>
+<li><a class="reference internal" href="#landuse">Landuse</a></li>
+<li><a class="reference internal" href="#precipitation-distribution-et-correction">Precipitation distribution / ET Correction</a></li>
+<li><a class="reference internal" href="#crop-information-critical-year">Crop information (Critical Year)</a></li>
+<li><a class="reference internal" href="#crop-information-non-critical-year">Crop information (Non Critical Year)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#dcd-inputs">DCD Inputs</a><ul>
+<li><a class="reference internal" href="#subarea-info">Subarea info</a></li>
+<li><a class="reference internal" href="#irrigation-efficiency">Irrigation efficiency</a></li>
+<li><a class="reference internal" href="#leach-applied">Leach applied</a></li>
+<li><a class="reference internal" href="#leach-drained">Leach drained</a></li>
+<li><a class="reference internal" href="#groundwater-rates">Groundwater rates</a></li>
+<li><a class="reference internal" href="#diversion-rates">Diversion rates</a></li>
+<li><a class="reference internal" href="#drainage-rates">Drainage rates</a></li>
+<li><a class="reference internal" href="#detaw-output">Detaw output</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="index.html"
+                          title="previous chapter">Welcome to DeltCD Inputs’s documentation!</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="planning.html"
+                          title="next chapter">Planning Data</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/historical.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="planning.html" title="Planning Data"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to DeltCD Inputs’s documentation!"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">DeltCD Inputs  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Historical Data</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Shey Raragopal, Kijin Nam.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>
