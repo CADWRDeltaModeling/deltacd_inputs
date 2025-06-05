@@ -29,7 +29,7 @@ detaw:
   # The land use CSV file. Yearly landuse in Hectares.
   landuse : 'inputs/landuse_delta.csv'
   # The ET correction CSV file
-  et_correction: 'inputs/et_correction_dsm2.csv'
+  et_correction: 'inputs/et_correction_delta.csv'
   # The critical years and non-critical years crop CSV files
   critical: 'inputs/crop_info_critical.csv'
   noncritical: 'inputs/crop_info_noncritical.csv'
