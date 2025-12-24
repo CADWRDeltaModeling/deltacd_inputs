@@ -27,9 +27,9 @@ detaw:
   # The input temperature CSV file. Station temperature in deg C.
   input_temperature: 'inputs/LODI_PT.csv'
   # The land use CSV file. Yearly landuse in Hectares.
-  landuse : 'inputs/landuse_dsm2.csv'
+  landuse : 'inputs/landuse_delta.csv'
   # The ET correction CSV file
-  et_correction: 'inputs/Percentage_mss2.csv'
+  et_correction: 'inputs/et_correction_delta.csv'
   # The critical years and non-critical years crop CSV files
   critical: 'inputs/critical.csv'
   noncritical: 'inputs/noncritical.csv'
