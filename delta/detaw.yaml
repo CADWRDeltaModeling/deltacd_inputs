@@ -35,9 +35,9 @@ detaw:
   noncritical: 'inputs/noncritical.csv'
 
   # Model Output control
-  detaw_output: 'outputs/detawoutput_schism_mss2.nc'
-  precip_output: 'outputs/precip_schism_mss2.nc'
-  et_output: 'outputs/ET0_mss2.nc'
+  detaw_output: 'outputs/detawoutput_delta.nc'
+  precip_output: 'outputs/precip_delta.nc'
+  et_output: 'outputs/et0_delta.nc'
   daily_output: 1
   monthly_output: 1
   yearly_output: 0
