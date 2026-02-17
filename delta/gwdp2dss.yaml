@@ -1,0 +1,15 @@
+# location of output netcdf that will be used to create dss files
+daily_netcdf: './outputs/dcd_areas_calsim3.nc'
+# location of output dss files
+monthly_dss: './outputs/dcd_island_mon_cs3.dss'
+# parameters for renaming variables in dss file creation
+rename_dict:
+  groundwater: "GW-FLOW"
+  deep_percolation: "DP-FLOW"
+# parameters for dss file creation
+ptype: 'PER-AVER'
+units: 'CFS'
+# Text to write to the "part" field in the dss file
+A: 'DELTACD'
+E: '1MON'
+F: 'DWR-BDO'

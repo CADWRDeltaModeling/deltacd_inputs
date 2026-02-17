@@ -1,0 +1,16 @@
+# location of output netcdf that will be used to create dss files
+daily_netcdf: './outputs/dcd_calsim3.nc'
+# location of output dss files
+monthly_dss: './outputs/dcd_calsim3_mon.dss'
+# parameters for renaming variables in dss file creation
+rename_dict:
+  diversion: "DIV-FLOW"
+  drainage: "DRAIN-FLOW"
+  seepage: "SEEP-FLOW"
+# parameters for dss file creation
+ptype: 'PER-AVER'
+units: 'CFS'
+# Text to write to the "part" field in the dss file
+A: 'DELTACD'
+E: '1MON'
+F: 'L2015'
